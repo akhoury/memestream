@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='shortcut icon' type='image/x-icon' href='/images/favicon.ico'>
+    <title><%= title %></title>
+    <script src='/javascripts/jquery.min.js'></script>
+    <!-- Twitter -->
+    <script src='/javascripts/bootstrap.min.js'></script>
+    <link rel='stylesheet' href='/stylesheets/bootstrap-responsive.min.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+
+    <!-- ramp -->
+    <script src='http://publishing.ramp.com/FileResource/widgets/sdk/1.0/dist/ramp-sdk-services.js'></script>
+
+    <script src='/javascripts/memestream.js'></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<header class='soft-borders some-shadow pull-left'>
+    <a href='/' class='pull-left' style='max-width:45%;min-width:45%;'>
+        <img src='/images/memestream-logo.png' style="width:25%;display:inline;">
+        <h3 style='display:inline;'>MemeStream</h3>
+    </a>
+    <div class='welcome-note pull-right' style='max-width:45%;min-width:45%;'>
+        Howdy <em>stranger</em>, welcome to <%= title %>,
+        where we waste your time, while wasting your time.</div>
+</header>
+<section id='content' class='soft-borders some-shadow pull-left'>
+    <div class='controls'>
+        match <!-- a max of
+        <input id='max-display' class='tiny-input' type='number' value='3' placeholder='display max'/>
+        --> memes from
+        <select id='channel'>
+            <option value='1632384'>ESPN</option>
+            <option value='1632392'>CNBC</option>
+            <option value='1632393'>ABC</option>
+            <option value='1632394'>CBS</option>
+            <option value='1632391'>E!</option>
+            <option value='1632383'>Univision</option>
+        </select>
+        channel, every
+        <input id='poll-interval' class='tiny-input' type='number' placeholder='seconds' value='1'/>seconds,
+        black-out nsfw
+        <input id='nsfw' type='checkbox' name='nsfw' value='1' checked/>
+        <input id='go' type='button' class='btn btn-primary' value='go'/>
+        <input id='reset' type='button' class='btn btn-info' value='reset'/>
+    </div>
+    <hr/>
+    <div class='meme-playground'>
+        <div id='memes-target' style='float:left;'></div>
+        <div id='match-target' style='float:left;'></div>
+    </div>
+</section>
+<!-- debug -->
+<div class='debug'>
+    <input type='text' id='query' name='query' placeholder='manual meme search'/>
+    <input type='button' id='q-go' class='btn btn-primary' value='search'/>
+    <span id='dawg'></span>
+    <span id='feed-text'></span>
+</div>
+</body>
+</html>

@@ -136,3 +136,13 @@ a, a:hover, a:active {
     color: white;
     opacity: 0.9;
 }
+#novid {
+    position: absolute;
+    float: left;
+    background: rgb(197, 197, 197);
+    margin-top: -20px;
+    min-height: 255px;
+    right: 0;
+    left: 500px;
+    margin-right: 10px;
+}
